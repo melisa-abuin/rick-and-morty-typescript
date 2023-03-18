@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import { Banner } from '@/components/banner'
+import { useCharacters } from '@/hooks/useCharacters'
 
 const inter = Inter({ subsets: ['latin'] })
 
 const Home = () => {
+  const data = useCharacters()
   return (
     <>
       <Head>

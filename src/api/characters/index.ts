@@ -2,9 +2,9 @@ import { gql } from '@apollo/client'
 
 const LocationFields = gql`
   fragment LocationFields on Location {
+    dimension
     name
     type
-    dimension
   }
 `
 
@@ -17,21 +17,21 @@ export const GetCharacters = gql`
         pages
       }
       results {
-        id
-        image
-        name
-        species
-        gender
-        status
         episode {
           name
         }
+        gender
         location {
           ...LocationFields
         }
+        id
+        image
+        name
         origin {
           ...LocationFields
         }
+        species
+        status
       }
     }
   }

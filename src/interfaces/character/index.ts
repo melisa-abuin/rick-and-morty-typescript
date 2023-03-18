@@ -2,15 +2,15 @@ import { Episode } from '../episode'
 import { Location } from '../location'
 
 export interface Character {
+  episode: Episode[]
+  gender: string
   id: number
   image: string
-  name: string
-  species: string
-  gender: string
-  status: string
   location: Location
+  name: string
   origin: Location
-  episode: Episode[]
+  species: string
+  status: string
 }
 
 export interface CharacterModel {

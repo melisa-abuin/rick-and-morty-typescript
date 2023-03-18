@@ -3,33 +3,33 @@ import { locationMock } from '../locations'
 
 export const charactersMock: Character[] = [
   {
+    episode: [
+      {
+        name: 'episode name',
+      },
+    ],
+    gender: 'gender mock',
     id: 1,
     image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-    name: 'name mock',
-    species: 'species mock',
-    gender: 'gender mock',
-    status: 'status mock',
     location: locationMock,
+    name: 'name mock',
     origin: locationMock,
-    episode: [
-      {
-        name: 'episode name',
-      },
-    ],
+    species: 'species mock',
+    status: 'status mock',
   },
   {
-    id: 2,
-    image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-    name: 'second name mock',
-    species: 'second species mock',
-    gender: 'second gender mock',
-    status: 'second status mock',
-    location: locationMock,
-    origin: locationMock,
     episode: [
       {
         name: 'episode name',
       },
     ],
+    gender: 'second gender mock',
+    id: 2,
+    image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+    location: locationMock,
+    name: 'second name mock',
+    origin: locationMock,
+    species: 'second species mock',
+    status: 'second status mock',
   },
 ]

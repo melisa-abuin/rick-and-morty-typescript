@@ -50,7 +50,7 @@ const renderHookWithWrapper = (mocks: MockedResponse[] = defaultMocks) => {
 }
 
 describe('useCharacters', () => {
-  it('returns loading state', () => {
+  it('returns a loading state', () => {
     const { result } = renderHookWithWrapper()
 
     expect(result.current.loading).toBe(true)
