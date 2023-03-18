@@ -10,6 +10,7 @@ import {
 } from './styles'
 import { Character } from '@/interfaces/character'
 import { CharacterInfo } from './components/characterInfo'
+import { Collapsable } from './components/collapsable'
 
 export const CharacterCard = (props: Character) => {
   const { name, species, gender, status, image, origin, episode, location } =
@@ -33,7 +34,9 @@ export const CharacterCard = (props: Character) => {
         </MainSection>
       </Row>
       <Divider />
+      <Collapsable location={location} title="Location" />
       <Divider />
+      <Collapsable location={origin} title="Origin" />
     </CardContainer>
   )
 }
