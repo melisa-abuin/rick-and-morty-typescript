@@ -5,6 +5,7 @@ import { Loader } from '@/components/loader'
 import { CharacterCard } from '@/components/characterCard'
 import { Paginator } from '@/components/paginator'
 import { useState } from 'react'
+import { numberOfElementsToShow } from '@/constants'
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState(0)
@@ -13,7 +14,7 @@ const Home = () => {
   if (loading) {
     return (
       <Layout>
-        <Loader cardsNumber={20} />
+        <Loader cardsNumber={numberOfElementsToShow} />
       </Layout>
     )
   }

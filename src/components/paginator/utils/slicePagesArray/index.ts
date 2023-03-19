@@ -1,8 +1,10 @@
+import { visiblePagesAmount } from '../../constants'
+
 export const slicePagesArray = (
   allPagesArray: Array<number>,
   currentPage: number
 ) => {
-  if (allPagesArray.length <= 5) {
+  if (allPagesArray.length <= visiblePagesAmount) {
     return allPagesArray
   }
 
