@@ -11,7 +11,7 @@ import {
 import { Character } from '@/interfaces/character'
 import { TitleDescriptionBlock } from './components/titleDescriptionBlock'
 import { Collapsable } from './components/collapsable'
-import { LocationInfo } from './components/locationInfo'
+import { LocationContent } from './components/locationContent'
 import { EpisodeList } from './components/episodeList'
 
 export const CharacterCard = (props: Character) => {
@@ -39,12 +39,12 @@ export const CharacterCard = (props: Character) => {
       </Row>
       <Divider />
       <Collapsable title="Location">
-        <LocationInfo location={location} />
+        <LocationContent location={location} />
       </Collapsable>
 
       <Divider />
       <Collapsable title="Origin">
-        <LocationInfo location={origin} />
+        <LocationContent location={origin} />
       </Collapsable>
 
       <Divider />

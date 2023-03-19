@@ -5,7 +5,7 @@ interface Props {
   location: Location
 }
 
-export const LocationInfo = ({ location }: Props) => (
+export const LocationContent = ({ location }: Props) => (
   <>
     <TitleDescriptionBlock title="dimension" description={location.dimension} />
 
