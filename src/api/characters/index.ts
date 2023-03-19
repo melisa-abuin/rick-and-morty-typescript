@@ -19,7 +19,8 @@ export const GetCharacters = gql`
         pages
       }
       results {
-        episode {
+        episodes: episode {
+          id
           name
         }
         gender

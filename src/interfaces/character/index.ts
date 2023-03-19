@@ -2,7 +2,7 @@ import { Episode } from '../episode'
 import { Location } from '../location'
 
 export interface Character {
-  episode: Episode[]
+  episodes: Episode[]
   gender: string
   id: number
   image: string

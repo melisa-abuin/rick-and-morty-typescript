@@ -3,8 +3,9 @@ import { locationMock } from '../locations'
 
 export const charactersMock: Character[] = [
   {
-    episode: [
+    episodes: [
       {
+        id: 1,
         name: 'episode name',
       },
     ],
@@ -18,8 +19,9 @@ export const charactersMock: Character[] = [
     status: 'status mock',
   },
   {
-    episode: [
+    episodes: [
       {
+        id: 1,
         name: 'episode name',
       },
     ],
