@@ -4,7 +4,9 @@ const LocationFields = gql`
   fragment LocationFields on Location {
     dimension
     name
-    type
+    residents {
+      id
+    }
   }
 `
 

@@ -5,8 +5,7 @@ export const Body = styled.div`
   background-color: #fff3e6;
   border-radius: 3px;
   border: 1px solid #ffbf80;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   margin: 10px 0;
   padding: 12px 0;
   width: 100%;
