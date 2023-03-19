@@ -9,7 +9,7 @@ interface Props {
   totalPages: number
 }
 
-export const Paginator = ({ currentPage, totalPages, onPageChange }: Props) => {
+export const Paginator = ({ currentPage, onPageChange, totalPages }: Props) => {
   const pagesList = Array.from({ length: totalPages }, (_, i) => i)
 
   const pagesToShow = slicePagesArray(pagesList, currentPage)
