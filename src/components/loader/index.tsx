@@ -1,6 +1,6 @@
 import { LoaderCard, LoadersContainer, LoaderImage } from './styles'
 
-type Props = {
+interface Props {
   cardsNumber: number
 }
 

@@ -4,7 +4,9 @@ const LocationFields = gql`
   fragment LocationFields on Location {
     dimension
     name
-    type
+    residents {
+      id
+    }
   }
 `
 
@@ -17,7 +19,8 @@ export const GetCharacters = gql`
         pages
       }
       results {
-        episode {
+        episodes: episode {
+          id
           name
         }
         gender
