@@ -44,7 +44,7 @@ const renderHookWithWrapper = (mocks: MockedResponse[] = defaultMocks) => {
   const wrapper = ({ children }: PropsWithChildren) => (
     <MockedProvider mocks={mocks}>{children}</MockedProvider>
   )
-  return renderHook(() => useCharacters(), {
+  return renderHook(() => useCharacters(0), {
     wrapper,
   })
 }
