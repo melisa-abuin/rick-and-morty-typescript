@@ -21,10 +21,13 @@ export const Collapsable = ({ location, title }: Props) => {
         <Icon alt="collapse" height={15} src="/right-chevron.png" width={15} />
       </Header>
 
-      <Body isCollapsed={isCollapsed}>
-        <CharacterInfo title="dimension" subtitle={location.dimension} />
-        <CharacterInfo title="name" subtitle={location.name} />
-      </Body>
+      {!isCollapsed && (
+        <Body>
+          <CharacterInfo title="dimension" subtitle={location.dimension} />
+
+          <CharacterInfo title="name" subtitle={location.name} />
+        </Body>
+      )}
     </CollapsableContainer>
   )
 }

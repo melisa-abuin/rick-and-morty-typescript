@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-export const Body = styled.div<{ isCollapsed: boolean }>`
+export const Body = styled.div`
   background-color: #fff3e6;
   border-radius: 3px;
   border: 1px solid #ffbf80;
-  display: ${({ isCollapsed }) => (isCollapsed ? 'none' : 'flex')};
   flex-direction: row;
   justify-content: space-around;
   margin: 10px 0;
