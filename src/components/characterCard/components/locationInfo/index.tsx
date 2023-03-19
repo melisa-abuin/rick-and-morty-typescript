@@ -1,4 +1,4 @@
-import { CharacterInfo } from '../characterInfo'
+import { TitleDescriptionBlock } from '../titleDescriptionBlock'
 import { Location } from '@/interfaces/location'
 
 interface Props {
@@ -7,13 +7,13 @@ interface Props {
 
 export const LocationInfo = ({ location }: Props) => (
   <>
-    <CharacterInfo title="dimension" subtitle={location.dimension} />
+    <TitleDescriptionBlock title="dimension" description={location.dimension} />
 
-    <CharacterInfo title="name" subtitle={location.name} />
+    <TitleDescriptionBlock title="name" description={location.name} />
 
-    <CharacterInfo
+    <TitleDescriptionBlock
       title="ammount of residents"
-      subtitle={location.residents?.length.toString()}
+      description={location.residents?.length.toString()}
     />
   </>
 )

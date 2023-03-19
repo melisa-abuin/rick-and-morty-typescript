@@ -6,11 +6,11 @@ export const Column = styled.div`
   flex-direction: column;
 `
 
+export const Description = styled.label`
+  margin: 10px 5px 0px 5px;
+`
+
 export const Title = styled.label`
   color: #c9c9c9;
   font-size: 14px;
-`
-
-export const Subtitle = styled.label`
-  margin: 10px 5px 0px 5px;
 `

@@ -9,7 +9,7 @@ import {
   Title,
 } from './styles'
 import { Character } from '@/interfaces/character'
-import { CharacterInfo } from './components/characterInfo'
+import { TitleDescriptionBlock } from './components/titleDescriptionBlock'
 import { Collapsable } from './components/collapsable'
 import { LocationInfo } from './components/locationInfo'
 import { EpisodeList } from './components/episodeList'
@@ -32,8 +32,8 @@ export const CharacterCard = (props: Character) => {
           </Row>
 
           <Row>
-            <CharacterInfo title="species" subtitle={species} />
-            <CharacterInfo title="gender" subtitle={gender} />
+            <TitleDescriptionBlock title="species" description={species} />
+            <TitleDescriptionBlock title="gender" description={gender} />
           </Row>
         </MainSection>
       </Row>
