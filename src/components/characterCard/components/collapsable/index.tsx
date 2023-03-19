@@ -26,6 +26,11 @@ export const Collapsable = ({ location, title }: Props) => {
           <CharacterInfo title="dimension" subtitle={location.dimension} />
 
           <CharacterInfo title="name" subtitle={location.name} />
+
+          <CharacterInfo
+            title="ammount of residents"
+            subtitle={location.residents?.length.toString()}
+          />
         </Body>
       )}
     </CollapsableContainer>

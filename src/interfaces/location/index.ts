@@ -1,5 +1,5 @@
 export interface Location {
   dimension?: string
   name?: string
-  type?: string
+  residents: Array<{ id: number }>
 }
