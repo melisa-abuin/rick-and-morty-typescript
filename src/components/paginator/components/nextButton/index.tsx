@@ -13,7 +13,7 @@ export const NextButton = ({
 }: Props) => {
   const onClick = () => handlePageChange(currentPage + 1)
 
-  if (currentPage >= totalPages) {
+  if (currentPage >= totalPages - 1) {
     return null
   }
 

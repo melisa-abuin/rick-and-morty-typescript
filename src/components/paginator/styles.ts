@@ -13,16 +13,16 @@ export const Pages = styled.div`
 `
 
 export const PageNumber = styled.div<{ isSelected: boolean }>`
+  align-items: center;
+  background-color: ${({ isSelected }) => (isSelected ? '#ffbf80' : 'inherit')};
+  border-radius: 50%;
+  border: ${({ isSelected }) => (isSelected ? 'none' : '1px solid #ffbf80')};
+  color: ${({ isSelected }) => (isSelected ? '#ffffff' : '#ffbf80')};
+  cursor: pointer;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: ${({ isSelected }) => (isSelected ? '#ffbf80' : 'inherit')};
-  color: ${({ isSelected }) => (isSelected ? '#ffffff' : '#ffbf80')};
-  border: ${({ isSelected }) => (isSelected ? 'none' : '1px solid #ffbf80')};
-  width: 25px;
   height: 25px;
+  justify-content: center;
   margin: 5px 10px;
-  cursor: pointer;
+  width: 25px;
 `
