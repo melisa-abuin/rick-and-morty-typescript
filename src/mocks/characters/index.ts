@@ -1,14 +1,10 @@
 import { Character } from '@/interfaces/character'
+import { episodesMock } from '../episodes'
 import { locationMock } from '../locations'
 
 export const charactersMock: Character[] = [
   {
-    episodes: [
-      {
-        id: 1,
-        name: 'episode name',
-      },
-    ],
+    episodes: episodesMock,
     gender: 'gender mock',
     id: 1,
     image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
@@ -19,12 +15,7 @@ export const charactersMock: Character[] = [
     status: 'status mock',
   },
   {
-    episodes: [
-      {
-        id: 1,
-        name: 'episode name',
-      },
-    ],
+    episodes: episodesMock,
     gender: 'second gender mock',
     id: 2,
     image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',

@@ -1,14 +1,9 @@
-import React, { useState } from 'react'
+import React, { PropsWithChildren, useState } from 'react'
 import { CollapsableContainer, Header, Body, Title, Icon } from './styles'
-import { Location } from '@/interfaces/location'
-import { CharacterInfo } from '../characterInfo'
 
-interface Props {
-  location: Location
-  title: 'Location' | 'Origin'
-}
+type Props = PropsWithChildren<{ title: string }>
 
-export const Collapsable = ({ location, title }: Props) => {
+export const Collapsable = ({ children, title }: Props) => {
   const [isCollapsed, setIsCollapsed] = useState(true)
 
   const toggleVisibility = () => setIsCollapsed((prev) => !prev)
@@ -21,18 +16,7 @@ export const Collapsable = ({ location, title }: Props) => {
         <Icon alt="collapse" height={15} src="/right-chevron.png" width={15} />
       </Header>
 
-      {!isCollapsed && (
-        <Body>
-          <CharacterInfo title="dimension" subtitle={location.dimension} />
-
-          <CharacterInfo title="name" subtitle={location.name} />
-
-          <CharacterInfo
-            title="ammount of residents"
-            subtitle={location.residents?.length.toString()}
-          />
-        </Body>
-      )}
+      {!isCollapsed && <Body>{children}</Body>}
     </CollapsableContainer>
   )
 }
