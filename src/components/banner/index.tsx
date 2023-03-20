@@ -5,6 +5,6 @@ export const Banner = () => (
   <BannerContainer>
     <Title>Rick and Morty</Title>
     <Gradient />
-    <BannerImage alt="banner" fill src="/home-banner.png" />
+    <BannerImage alt="banner" fill priority src="/home-banner.png" />
   </BannerContainer>
 )
