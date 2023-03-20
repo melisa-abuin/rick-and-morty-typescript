@@ -18,6 +18,7 @@ export const Paginator = ({ currentPage, onPageChange, totalPages }: Props) => {
     window.scrollTo(0, 0)
     onPageChange(pageNumber)
   }
+
   return (
     <Container>
       <PrevButton
