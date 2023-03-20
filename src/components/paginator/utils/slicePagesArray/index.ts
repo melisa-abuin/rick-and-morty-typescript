@@ -1,5 +1,7 @@
 import { visiblePagesAmount } from '../../constants'
 
+const visiblePagesOffsetFromCurrentPage = Math.floor(visiblePagesAmount / 2)
+
 export const slicePagesArray = (
   allPagesArray: Array<number>,
   currentPage: number
@@ -8,8 +10,8 @@ export const slicePagesArray = (
     return allPagesArray
   }
 
-  let startIndex = currentPage - 2
-  let endIndex = currentPage + 3
+  let startIndex = currentPage - visiblePagesOffsetFromCurrentPage
+  let endIndex = currentPage + visiblePagesOffsetFromCurrentPage + 1
 
   if (startIndex < 0) {
     endIndex -= startIndex
