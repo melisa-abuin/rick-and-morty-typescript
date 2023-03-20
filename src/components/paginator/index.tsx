@@ -14,8 +14,10 @@ export const Paginator = ({ currentPage, onPageChange, totalPages }: Props) => {
 
   const pagesToShow = slicePagesArray(pagesList, currentPage)
 
-  const handlePageChange = (pageNumber: number) => onPageChange(pageNumber)
-
+  const handlePageChange = (pageNumber: number) => {
+    window.scrollTo(0, 0)
+    onPageChange(pageNumber)
+  }
   return (
     <Container>
       <PrevButton
