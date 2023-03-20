@@ -11,12 +11,7 @@ export const Loader = ({ cardsNumber }: Props) => {
     <LoadersContainer>
       {loaderCardsToShow.map((card) => (
         <LoaderCard key={card}>
-          <LoaderImage
-            alt="loader"
-            fill
-            src="/card-loader.gif"
-            sizes="(max-width: 1200px) 480px"
-          />
+          <LoaderImage alt="loader" fill src="/card-loader.gif" sizes="480px" />
         </LoaderCard>
       ))}
     </LoadersContainer>

@@ -9,7 +9,7 @@ export const Banner = () => (
       alt="banner"
       fill
       priority
-      sizes="(max-width: 1200px) 100vw"
+      sizes="100vw"
       src="/home-banner.png"
     />
   </BannerContainer>
