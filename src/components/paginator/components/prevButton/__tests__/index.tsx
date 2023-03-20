@@ -25,7 +25,7 @@ describe('PrevButton', () => {
   })
 
   it('renders null if the current page is the first one', () => {
-    mount({ ...defaultProps, currentPage: 0 })
+    mount({ ...defaultProps, currentPage: 1 })
 
     expect(screen.queryByText('Prev')).not.toBeInTheDocument()
   })

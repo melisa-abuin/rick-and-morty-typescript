@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { numberOfElementsToShow } from '@/constants'
 
 const Home = () => {
-  const [currentPage, setCurrentPage] = useState(0)
+  const [currentPage, setCurrentPage] = useState(1)
   const { data, error, loading } = useCharacters(currentPage)
 
   if (loading) {

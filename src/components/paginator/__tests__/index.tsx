@@ -31,7 +31,7 @@ describe('Paginator', () => {
     userEvent.click(screen.getByText('2'))
 
     await waitFor(() => {
-      expect(onPageChange).toHaveBeenCalledWith(1)
+      expect(onPageChange).toHaveBeenCalledWith(2)
     })
   })
 

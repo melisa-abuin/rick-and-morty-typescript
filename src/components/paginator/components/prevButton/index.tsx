@@ -8,7 +8,7 @@ interface Props {
 export const PrevButton = ({ currentPage, handlePageChange }: Props) => {
   const onClick = () => handlePageChange(currentPage - 1)
 
-  if (currentPage < 1) {
+  if (currentPage <= 1) {
     return null
   }
 

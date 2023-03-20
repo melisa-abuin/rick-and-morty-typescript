@@ -10,8 +10,8 @@ export const slicePagesArray = (
     return allPagesArray
   }
 
-  let startIndex = currentPage - visiblePagesOffsetFromCurrentPage
-  let endIndex = currentPage + visiblePagesOffsetFromCurrentPage + 1
+  let startIndex = currentPage - visiblePagesOffsetFromCurrentPage - 1
+  let endIndex = currentPage + visiblePagesOffsetFromCurrentPage
 
   if (startIndex < 0) {
     endIndex -= startIndex
