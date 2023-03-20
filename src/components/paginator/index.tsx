@@ -10,11 +10,14 @@ interface Props {
 }
 
 export const Paginator = ({ currentPage, onPageChange, totalPages }: Props) => {
-  const pagesList = Array.from({ length: totalPages }, (_, i) => i)
+  const pagesList = Array.from({ length: totalPages }, (_, i) => i + 1)
 
   const pagesToShow = slicePagesArray(pagesList, currentPage)
 
-  const handlePageChange = (pageNumber: number) => onPageChange(pageNumber)
+  const handlePageChange = (pageNumber: number) => {
+    window.scrollTo(0, 0)
+    onPageChange(pageNumber)
+  }
 
   return (
     <Container>
@@ -30,7 +33,7 @@ export const Paginator = ({ currentPage, onPageChange, totalPages }: Props) => {
             isSelected={page === currentPage}
             onClick={() => handlePageChange(page)}
           >
-            {page + 1}
+            {page}
           </PageNumber>
         ))}
       </Pages>

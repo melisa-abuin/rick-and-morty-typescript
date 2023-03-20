@@ -1,12 +1,12 @@
 import { slicePagesArray } from '..'
 
-const testPages = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const testPages = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 describe('slicePagesArray', () => {
   it('returns a 5 length array if the current page is the first one', () => {
-    const pages = slicePagesArray(testPages, 0)
+    const pages = slicePagesArray(testPages, 1)
 
-    expect(pages).toStrictEqual([0, 1, 2, 3, 4])
+    expect(pages).toStrictEqual([1, 2, 3, 4, 5])
   })
 
   it('returns a 5 length array if the current page is the last one', () => {
@@ -22,9 +22,9 @@ describe('slicePagesArray', () => {
   })
 
   it('returns the default array of pages if the amount of pages is lower than 5', () => {
-    const shortTestPages = [0, 1, 2]
+    const shortTestPages = [1, 2, 3]
     const pages = slicePagesArray(shortTestPages, 1)
 
-    expect(pages).toStrictEqual([0, 1, 2])
+    expect(pages).toStrictEqual([1, 2, 3])
   })
 })
